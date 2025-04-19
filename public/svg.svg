@@ -1,0 +1,12 @@
+<!-- to add an SVG icon go to https://phosphoricons.com/?q=%22user%22 search for the icon you nee -->
+<!-- copy every thing between the <svg> tags in our icon  EXCEPT for the <rect> tag-->
+<!-- wrap what you copied form previous step into <symbol> tags and add an id and viewBox as shown below -->
+
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-user" viewBox="0 0 256 256">
+  <circle cx="128" cy="96" r="64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+  <path d="M32,216c19.37-33.47,54.55-56,96-56s76.63,22.53,96,56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+</symbol>
+</defs>
+</svg>
