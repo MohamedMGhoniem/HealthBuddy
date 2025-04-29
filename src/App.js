@@ -1,7 +1,12 @@
+import Header from './Header';
+import HeroSection from './HeroSection';
+
 export default function App() {
   return (
-    <svg>
-      <use href="/svg.svg#icon-user"></use>
-    </svg>
+    <>
+      <Header />
+      <HeroSection />
+      <section style={{ height: '100vh' }}></section>
+    </>
   );
 }
