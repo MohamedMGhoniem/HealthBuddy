@@ -1,6 +1,7 @@
 import LaptopSvg from './LaptopSvg';
 import MobileSvg from './MobileSvg';
-import Section from './Section';
+import Section from '../Section';
+import Pulse from './Pulse';
 
 export default function HeroSection() {
   return (
@@ -33,6 +34,7 @@ export default function HeroSection() {
         aria-hidden="true"
         className="decoration-bottom"
       ></img>
+      <Pulse />
     </Section>
   );
 }

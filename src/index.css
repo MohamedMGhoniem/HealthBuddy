@@ -130,7 +130,7 @@ img {
 }
 
 .logo {
-  width: 20rem;
+  width: 30rem;
 }
 
 .nav {
@@ -147,7 +147,7 @@ img {
 
 .user-controls {
   display: flex;
-  gap: 3.2rem;
+  gap: 2.4rem;
 }
 
 .btn-account {
@@ -155,6 +155,7 @@ img {
   height: 4.2rem;
   border-radius: 50%;
   overflow: hidden;
+  padding: 0;
 }
 /* //////////////////////////////////////////////// */
 /* Hero Section */
@@ -201,6 +202,24 @@ img {
   z-index: -1;
 }
 
+.back-pulse {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: -2;
+  animation: 4s infinite linear pulse;
+  stroke-width: 5.3rem;
+  stroke-dashoffset: 17000;
+  stroke-dasharray: 15000;
+}
+
+@keyframes pulse {
+  to {
+    stroke-dashoffset: 0%;
+  }
+}
+
 .btn-download {
   background-color: var(--light-btn);
   color: var(--color-secondary);
@@ -212,10 +231,18 @@ img {
   padding: 1.6rem 3.2rem;
   font-size: 2.4rem;
   transition: box-shadow 1s;
+  border-radius: 22px;
+  animation: 1s infinite alternate btn-glow;
 
   &:hover {
-    box-shadow: 0px 0px 20px 4px var(--light-btn);
+    animation-play-state: paused;
     color: var(--color-ternary);
+  }
+}
+
+@keyframes btn-glow {
+  to {
+    box-shadow: 0px 0px 20px 4px var(--light-btn);
   }
 }
 

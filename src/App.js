@@ -1,5 +1,5 @@
-import Header from './Header';
-import HeroSection from './HeroSection';
+import Header from './header/Header';
+import HeroSection from './hero/HeroSection';
 
 export default function App() {
   return (

@@ -1,31 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
+import { elementObserver } from '../helper';
+
 export default function MobileSvg() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        console.log(entry);
-        console.log(entry.isIntersecting, entry.boundingClientRect.y);
-        if (entry.isIntersecting) console.log(entry);
-        setIsVisible(true);
-        if (!entry.isIntersecting && entry.boundingClientRect.y > 0) {
-          setIsVisible(false);
-        }
-      },
-      {
-        root: null,
-        threshold: 0.2,
-      }
-    );
-
-    const section = sectionRef.current;
-    if (section) observer.observe(section);
-
-    return () => {
-      if (section) observer.unobserve(section);
-    };
+    elementObserver(setIsVisible, sectionRef);
   }, []);
 
   return (
