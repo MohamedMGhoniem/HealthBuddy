@@ -27,7 +27,7 @@ const HowItWorks = () => {
     return (
         <section className="how-it-works-section">
             <img
-                src="./images/hero/hero-top.png"
+                src="./images/how/top.png"
                 alt="decoration"
                 aria-hidden="true"
                 className="decoration-top"
@@ -50,7 +50,7 @@ const HowItWorks = () => {
             </div>
 
             <img
-                src="./images/hero/hero-bottom.png"
+                src="./images/how/bottom.png"
                 alt="decoration"
                 aria-hidden="true"
                 className="decoration-bottom"
