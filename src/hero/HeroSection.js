@@ -5,16 +5,15 @@ import Pulse from './Pulse';
 import ContentParagraph from '../ContentParagraph';
 import ContentHeading from '../ContentHeading';
 import Content from '../Content';
+import Decoration from '../Decoration';
 
-export default function HeroSection() {
+export default function MeetSection() {
   return (
     <Section className="section-hero">
-      <img
-        src="./images/hero/hero-top.png"
-        alt="decoration"
-        aria-hidden="true"
-        className="decoration-top"
-      ></img>
+      <Decoration
+        src={'./images/hero/hero-top.png'}
+        className={'decoration-top'}
+      />
       <Content>
         <ContentHeading
           isHero={true}
@@ -35,12 +34,10 @@ export default function HeroSection() {
       </Content>
       <button className="btn-download">Download Now!</button>
       <Pulse />
-      <img
-        src="./images/hero/hero-bottom.png"
-        alt="decoration"
-        aria-hidden="true"
-        className="decoration-bottom"
-      ></img>
+      <Decoration
+        src={'./images/hero/hero-bottom.png'}
+        className={'decoration-bottom'}
+      />
     </Section>
   );
 }
