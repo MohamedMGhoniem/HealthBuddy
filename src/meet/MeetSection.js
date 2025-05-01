@@ -53,10 +53,7 @@ export default function HowItWorks() {
       <figure className="sanjo-stand">
         <img src="./images/meet/sanjo-back-stand.png" alt="sanjo standing" />
       </figure>
-      <Decoration
-        src={'./images/meet/circles.png'}
-        className={'decoration-bottom'}
-      />
+      <Decoration src={'./circles.png'} className={'decoration-bottom'} />
     </Section>
   );
 }

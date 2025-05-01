@@ -652,13 +652,17 @@ img {
 
 /* ################# */
 
-.how-it-works-section {
-  padding: 5rem 2rem;
+.section-how {
+  padding: 15rem 2rem;
   position: relative;
   overflow: hidden;
 }
 
-.how-it-works-section::before {
+.section-how .content {
+  text-align: center;
+}
+
+.section-how::before {
   content: '';
   position: absolute;
   top: 10%;
@@ -673,7 +677,7 @@ img {
   pointer-events: none;
 }
 
-.how-it-works-section::after {
+.section-how::after {
   content: '';
   position: absolute;
   bottom: 10%;
@@ -703,19 +707,22 @@ img {
 .step {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
-  max-width: 900px;
   gap: 2rem;
   margin-bottom: 2rem;
 }
+
+/* .step:nth-child(even) .text-block {
+  order: 2;
+} */
 
 .step-reverse {
   flex-direction: row-reverse;
 }
 
 .text-block {
-  width: 50rem;
-  height: 23rem;
+  width: 50%;
   background: var(--color-ternary);
   border-radius: 1rem;
   padding: 3rem;
@@ -729,19 +736,8 @@ img {
   font-size: 4rem;
   margin-bottom: 0.5rem;
   color: var(--color-secondary);
+  opacity: 54%;
   font-weight: 700;
-}
-
-.text-block h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--txt);
-}
-
-.text-block p {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  color: var(--txt);
 }
 
 .phone-graphic {
@@ -802,11 +798,21 @@ img {
   z-index: -1;
 }
 
-.decoration-top,
-.decoration-bottom {
+.section-how .decoration-top,
+.section-how .decoration-bottom {
   position: absolute;
   width: 100%;
+  height: 90rem;
   z-index: -1;
+  left: 0;
+}
+
+.section-how .decoration-bottom {
+  bottom: 0;
+}
+
+.section-how .decoration-top {
+  top: -15rem;
 }
 
 /* Responsive Design */

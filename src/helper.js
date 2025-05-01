@@ -1,8 +1,7 @@
 // unified intersection observer
-export function elementObserver(setter, ref) {
+export function elementObserver(setter, ref, threshold) {
   const observer = new IntersectionObserver(
     ([entry]) => {
-      if (entry.isIntersecting) console.log(entry);
       setter(true);
       if (!entry.isIntersecting && entry.boundingClientRect.y > 0) {
         setter(false);
@@ -10,7 +9,7 @@ export function elementObserver(setter, ref) {
     },
     {
       root: null,
-      threshold: 0.2,
+      threshold: threshold,
     }
   );
 

@@ -6,7 +6,7 @@ export default function MobileSvg() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    elementObserver(setIsVisible, sectionRef);
+    elementObserver(setIsVisible, sectionRef, 0.2);
   }, []);
 
   return (
