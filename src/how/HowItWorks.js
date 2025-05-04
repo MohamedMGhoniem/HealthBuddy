@@ -3,6 +3,8 @@ import ContentHeading from '../ContentHeading';
 import Decoration from '../Decoration';
 import Section from '../Section';
 import StepItem from './StepItem';
+import { useEffect, useRef, useState } from 'react';
+import { elementObserver } from '../helper';
 
 const steps = [
   {
@@ -32,25 +34,42 @@ const steps = [
 ];
 
 const HowItWorks = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionHow = useRef(null);
+
+  useEffect(() => {
+    elementObserver(setIsVisible, sectionHow, 0.2);
+  }, []);
+
   return (
-    <Section className="section-how">
+    <Section className="section-how" ref={sectionHow}>
       <Decoration src={'./images/how/top.png'} className={'decoration-top'} />
 
-      <Content>
-        <ContentHeading
-          title={'How It Works'}
-          subheading={`It's Kinda Like Magic`}
-        />
-      </Content>
+      <div className={`content-wrapper ${isVisible ? 'slide-up' : ''}`}>
+        <Content>
+          <ContentHeading
+            title={'How It Works'}
+            subheading={`It's Kinda Like Magic`}
+          />
+        </Content>
+      </div>
+
       <div className="steps-container">
         {steps.map((step, index) => (
-          <StepItem
+          <div
             key={index}
-            number={step.number}
-            title={step.title}
-            description={step.description}
-            reverse={index % 2 !== 0} // Alternate layout for odd-indexed steps
-          />
+            className={`step-wrapper ${
+              isVisible ? (index % 2 === 0 ? 'slide-from-left' : 'slide-from-right') : ''
+            }`}
+            style={{ transitionDelay: `${0.2 * (index + 1)}s` }} 
+          >
+            <StepItem
+              number={step.number}
+              title={step.title}
+              description={step.description}
+              reverse={index % 2 !== 0} 
+            />
+          </div>
         ))}
       </div>
 
@@ -63,3 +82,4 @@ const HowItWorks = () => {
 };
 
 export default HowItWorks;
+
