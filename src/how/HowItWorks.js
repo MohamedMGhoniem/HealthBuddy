@@ -5,7 +5,7 @@ import Section from '../Section';
 import StepItem from './StepItem';
 import { useEffect, useRef, useState } from 'react';
 import { elementObserver } from '../helper';
-import '../styles/hom.css'
+import '../styles/how.css';
 
 const steps = [
   {
@@ -60,15 +60,19 @@ const HowItWorks = () => {
           <div
             key={index}
             className={`step-wrapper ${
-              isVisible ? (index % 2 === 0 ? 'slide-from-left' : 'slide-from-right') : ''
+              isVisible
+                ? index % 2 === 0
+                  ? 'slide-from-left'
+                  : 'slide-from-right'
+                : ''
             }`}
-            style={{ transitionDelay: `${0.2 * (index + 1)}s` }} 
+            style={{ transitionDelay: `${0.2 * (index + 1)}s` }}
           >
             <StepItem
               number={step.number}
               title={step.title}
               description={step.description}
-              reverse={index % 2 !== 0} 
+              reverse={index % 2 !== 0}
             />
           </div>
         ))}
@@ -83,4 +87,3 @@ const HowItWorks = () => {
 };
 
 export default HowItWorks;
-
