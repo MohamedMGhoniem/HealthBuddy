@@ -3,6 +3,7 @@ import ContentHeading from '../ContentHeading';
 import Decoration from '../Decoration';
 import Section from '../Section';
 import StepItem from './StepItem';
+import '../styles/how.css';
 
 const steps = [
   {

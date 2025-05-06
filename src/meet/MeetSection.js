@@ -2,6 +2,7 @@ import Section from '../Section';
 import Content from '../Content';
 import ContentHeading from '../ContentHeading';
 import Decoration from '../Decoration';
+import '../styles/meet.css';
 
 export default function HowItWorks() {
   return (
@@ -18,7 +19,6 @@ export default function HowItWorks() {
       </Content>
       <div className="messages-container">
         <div className="sanjo-messages">
-          <div className="log"></div>
           <p className="message">
             Craving something healthy and tasty? I got you!
           </p>
@@ -43,15 +43,11 @@ export default function HowItWorks() {
           <p className="message">
             Your health journey, but smarter (and yummier).
           </p>
-          <p className="message">
-            Let’s make staying healthy actually fun.” “Your personal AI health
-            buddy — now with extra charm 😄
-          </p>
         </div>
       </div>
 
       <figure className="sanjo-stand">
-        <img src="./images/meet/sanjo-back-stand.png" alt="sanjo standing" />
+        <img src="./images/meet/sanjo-back-stand-2.png" alt="sanjo standing" />
       </figure>
       <Decoration src={'./circles.png'} className={'decoration-bottom'} />
     </Section>
