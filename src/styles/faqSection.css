@@ -1,0 +1,16 @@
+/* faqSection */
+
+.section-faq{
+    padding-top: calc(10rem + 4.2rem);
+  }
+  .section-faq .content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+  .section-faq .subheading{
+    font-size: 1.7rem;
+    line-height: 1.6;
+    color: var(--txt);
+  }

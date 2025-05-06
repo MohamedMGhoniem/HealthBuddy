@@ -10,8 +10,7 @@ export default function ContentHeading({
         ) : (
           <h2 className="heading-secondary">{title}</h2>
         )}
-        <span className="subheading margin-bot-lrg">{subheading}</span>
-        {subheading || (
+        {subheading && (
           <span className="subheading margin-bot-lrg">{subheading}</span>
         )}
       </>

@@ -5,6 +5,7 @@ import Section from '../Section';
 import StepItem from './StepItem';
 import { useEffect, useRef, useState } from 'react';
 import { elementObserver } from '../helper';
+import '../styles/hom.css'
 
 const steps = [
   {

@@ -4,6 +4,7 @@ import HowItWorks from './how/HowItWorks';
 import MeetSection from './meet/MeetSection';
 import Features from './features/Features'
 import Review from './review/Review'
+import FaqSection from './faq/FaqSection';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <MeetSection />
       <Features/>
       <Review />
+      <FaqSection />
       <section style={{ height: '100vh' }}></section>
     </>
   );

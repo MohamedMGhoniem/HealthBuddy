@@ -2,6 +2,7 @@ import Section from '../Section';
 import Content from '../Content';
 import ContentHeading from '../ContentHeading';
 import Decoration from '../Decoration';
+import '../styles/meet.css'
 
 export default function HowItWorks() {
   return (

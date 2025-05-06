@@ -6,6 +6,7 @@ import ContentParagraph from '../ContentParagraph';
 import ContentHeading from '../ContentHeading';
 import Content from '../Content';
 import Decoration from '../Decoration';
+import '../styles/hero.css'
 
 export default function MeetSection() {
   return (
