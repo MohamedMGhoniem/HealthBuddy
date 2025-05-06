@@ -1,232 +1,135 @@
 /* //////////////////////////////////////////////// */
 /* meet Section */
 .section-meet {
-    text-align: center;
+  text-align: center;
+}
+
+.section-meet .container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.section-meet .content {
+  grid-column: span 2;
+}
+
+.section-meet .decoration-back,
+.section-meet .decoration-bottom {
+  z-index: -1;
+}
+
+.section-meet .decoration-bottom {
+  bottom: 0;
+  right: 0;
+  width: 30rem;
+  height: auto;
+}
+
+.sanjo-stand {
+  height: 30rem;
+  align-self: end;
+}
+
+.sanjo-stand img {
+  width: auto;
+}
+
+.messages-container {
+  height: 75vh;
+  position: relative;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--color-primary) 20%,
+    var(--color-primary) 70%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--color-primary) 20%,
+    var(--color-primary) 70%,
+    transparent 100%
+  );
+  overflow: hidden;
+}
+
+.sanjo-messages {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  position: relative;
+}
+
+.message {
+  background-color: #fff;
+  color: var(--color-primary);
+  width: 100%;
+  height: 8.2rem;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  padding: 2.4rem;
+  border-top: 9px solid var(--color-secondary);
+  border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  animation: 18s linear infinite scrollDown;
+  z-index: -1;
+  bottom: max(calc(9rem * 8), 100%);
+}
+
+@keyframes scrollDown {
+  0% {
+    scale: 0.5;
+    opacity: 20%;
   }
-  
-  .section-meet .container {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
+  50% {
+    scale: 0.8;
+    opacity: 60%;
   }
-  
-  .section-meet .content {
-    grid-column: span 2;
+  60% {
+    scale: 1.2;
+    opacity: 1;
+    z-index: 5;
   }
-  
-  .section-meet .decoration-back,
-  .section-meet .decoration-bottom {
-    z-index: -1;
+  70% {
+    scale: 0.8;
+    opacity: 60%;
   }
-  
-  .section-meet .decoration-bottom {
+
+  100% {
     bottom: 0;
-    right: 0;
-    width: 30rem;
-    height: auto;
+    scale: 0.5;
+    opacity: 20%;
   }
-  
-  .sanjo-stand {
-    height: 30rem;
-    align-self: end;
-  }
-  
-  .sanjo-stand img {
-    width: auto;
-  }
-  
-  .messages-container {
-    height: 75vh;
-    position: relative;
-    -webkit-mask-image: linear-gradient(
-      to bottom,
-      transparent 0%,
-      var(--color-primary) 20%,
-      var(--color-primary) 70%,
-      transparent 100%
-    );
-    mask-image: linear-gradient(
-      to bottom,
-      transparent 0%,
-      var(--color-primary) 20%,
-      var(--color-primary) 70%,
-      transparent 100%
-    );
-    overflow: hidden;
-  }
-  
-  .sanjo-messages {
-    width: 80%;
-    margin: 0 auto;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2.4rem;
-    transform-style: preserve-3d;
-    perspective: 3000px;
-    --quantity: 9;
-  
-    /* background-color: cyan; */
-  
-    animation: 30s infinite linear rotate;
-  }
-  /* 
-  .sanjo-messages::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-  
-    width: 50rem;
-    height: 50rem;
-    transform: rotateX(90deg);
-    background-color: green;
-  } */
-  
-  @keyframes rotate {
-    to {
-      transform: rotateX(-360deg);
-    }
-  }
-  
-  .message {
-    background-color: #fff;
-    color: var(--color-primary);
-    width: 100%;
-    height: 8.2rem;
-    margin: 0 auto;
-    font-size: 1.8rem;
-    padding: 2.4rem;
-    border-top: 9px solid var(--color-secondary);
-    border-radius: 2rem;
-    transition: all 0.3s ease-in-out;
-    position: absolute;
-    inset: 0 0 0 0;
-    top: 30%;
-    transform: rotateX(
-        calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
-      )
-      translateZ(300px);
-  }
-  
-  .message:nth-child(1) {
-    animation-delay: calc(18s / 8 * (8 - 1) * -1);
-  }
-  
-  .message:nth-child(2) {
-    animation-delay: calc(18s / 8 * (8 - 2) * -1);
-  }
-  
-  .message:nth-child(3) {
-    animation-delay: calc(18s / 8 * (8 - 3) * -1);
-  }
-  
-  .message:nth-child(4) {
-    animation-delay: calc(18s / 8 * (8 - 4) * -1);
-  }
-  
-  .message:nth-child(5) {
-    animation-delay: calc(18s / 8 * (8 - 5) * -1);
-  }
-  
-  .message:nth-child(6) {
-    animation-delay: calc(18s / 8 * (8 - 6) * -1);
-  }
-  
-  .message:nth-child(7) {
-    animation-delay: calc(18s / 8 * (8 - 7) * -1);
-  }
-  
-  .message:nth-child(8) {
-    animation-delay: 15s;
-    --position: 8;
-  }
-  .message:nth-child(9) {
-    animation-delay: 17s;
-    --position: 9;
-  }
-  
-  /* @keyframes circular-route {
-    0% {
-      opacity: 10%;
-    }
-  
-    35% {
-      opacity: 70%;
-      scale: 1;
-    }
-    40% {
-      opacity: 1;
-      scale: 1.2;
-    }
-    50% {
-      opacity: 1;
-      scale: 1.2;
-    }
-    55% {
-      scale: 1;
-      opacity: 70%;
-    }
-  
-    100% {
-      transform: translate3d(0, 700%, 0);
-      opacity: 10%;
-    }
-  } */
-  
-  /* @keyframes circular-route {
-    0% {
-      opacity: 20%;
-      transform: translate3d(0, -100%, 0) scale(1);
-      z-index: -1;
-    }
-  
-    10% {
-      opacity: 50%;
-      transform: translate3d(0, 10%, 0) scale(1);
-      z-index: -1;
-    }
-    20% {
-      opacity: 50%;
-      transform: translate3d(0, 110%, 0) scale(1);
-      z-index: -1;
-    }
-    30% {
-      opacity: 50%;
-      transform: translate3d(0, 110%, 0) scale(1);
-      z-index: -1;
-    }
-  
-    50% {
-      opacity: 1;
-      transform: translate3d(0, 220%, 0) scale(1);
-      z-index: -1;
-    }
-    55% {
-      opacity: 1;
-      transform: translate3d(0, 220%, 0) scale(1.2);
-      z-index: 5;
-    }
-    60% {
-      opacity: 1;
-      transform: translate3d(0, 220%, 0) scale(1.2);
-      z-index: 5;
-    }
-  
-    80% {
-      opacity: 50%;
-      transform: translate3d(0, 380%, 0) scale(1);
-      z-index: -1;
-    }
-    90% {
-      opacity: 50%;
-      transform: translate3d(0, 380%, 0) scale(1);
-      z-index: -1;
-    }
-    100% {
-      opacity: 50%;
-      transform: translate3d(0, 620%, 0) scale(1);
-      z-index: -1;
-    }
-  } */
-  
-  
+}
+
+.message:nth-child(1) {
+  animation-delay: calc(18s / 8 * (8 - 1) * -1);
+}
+.message:nth-child(2) {
+  animation-delay: calc(18s / 8 * (8 - 2) * -1);
+}
+.message:nth-child(3) {
+  animation-delay: calc(18s / 8 * (8 - 3) * -1);
+}
+.message:nth-child(4) {
+  animation-delay: calc(18s / 8 * (8 - 4) * -1);
+}
+.message:nth-child(5) {
+  animation-delay: calc(18s / 8 * (8 - 5) * -1);
+}
+.message:nth-child(6) {
+  animation-delay: calc(18s / 8 * (8 - 6) * -1);
+}
+.message:nth-child(7) {
+  animation-delay: calc(18s / 8 * (8 - 7) * -1);
+}
+.message:nth-child(8) {
+  animation-delay: calc(18s / 8 * (8 - 8) * -1);
+}
