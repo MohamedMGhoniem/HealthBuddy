@@ -3,6 +3,7 @@ import Section from '../Section';
 import Content from '../Content';
 import Decoration from '../Decoration';
 import ContentHeading from '../ContentHeading.js';
+import '../styles/features.css';
 
 const features = [
   { icon: 'user', text: 'Personalized Meal Plans', lineLength: 'medium' },
