@@ -37,6 +37,7 @@ export default function Features() {
         {features.map((feature, index) => (
           <div key={index} className="feature-wrapper">
             <div
+              aria-hidden="true"
               className={`connector-line connector-line--${feature.lineLength}`}
             ></div>
             <FeatureItem icon={feature.icon} text={feature.text} />

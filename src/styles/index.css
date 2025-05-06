@@ -98,6 +98,7 @@ img {
 
 [class^='decoration-'] {
   position: absolute;
+  z-index: -1;
 }
 
 [class^='section-'] {
