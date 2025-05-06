@@ -13,7 +13,7 @@ export default function App() {
       <HowItWorks />
       <MeetSection />
       <Features/>
-      {/* <Review/> */}
+      <Review/>
       <section style={{ height: '100vh' }}></section>
     </>
   );
