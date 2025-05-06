@@ -1,0 +1,131 @@
+/* /////////////////////////////////////////// */
+/* Features */
+
+.section-features {
+    height: 100vh;
+    position: relative;
+  }
+  
+  .section-features .decoration-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .section-features .container {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+  } 
+  
+  .section-features .content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--color-secondary);
+    overflow: hidden;
+  }
+  
+  .section-features .heading-secondary {
+    margin-bottom: 0;
+    transform: rotate(-90deg);
+    text-wrap-mode: nowrap;
+  }
+  
+  .circle_up,
+  .circle_down {
+    height: 18rem;
+    height: 18rem;
+    width: auto;
+    z-index: -1;
+    position: absolute;
+  }
+  .circle_up {
+    position: absolute;
+    top: 0;
+  
+    z-index: 1;
+  }
+  .circle_down {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  .features-grid {
+    width: 80%;
+    display: grid;
+    gap: 2rem;
+    width: fit-content;
+  }
+  
+  .feature-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .feature-item::before {
+    content: '';
+    top: 50%;
+    margin-left: -3rem;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+  }
+  .connector-line {
+    height: 2px;
+    background-color: var(--color-secondary);
+  }
+  
+  .connector-line--short {
+    width: 10rem;
+  }
+  
+  .connector-line--medium {
+    width: 22rem;
+  }
+  
+  .connector-line--long {
+    width: 37rem;
+  }
+  
+  .feature-item {
+    background-color: var(--txt);
+    color: var(--color-secondary);
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    margin: 0.6rem 0;
+    font-weight: 600;
+    font-size: 2.5rem;
+    transition: transform 0.3s ease;
+    /* width: fit-content; */
+  }
+  
+  .feature-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-item .icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 2rem;
+  }
+  
+  .section-features .decoration-bottom {
+    width: 35rem;
+    height: 35rem;
+    margin: 35rem 0 0 100rem;
+    /* t r b l*/
+    transform: translateY(-100%);
+    transform: rotate(270deg);
+  }
