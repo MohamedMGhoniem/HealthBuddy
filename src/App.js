@@ -2,8 +2,8 @@ import Header from './header/Header';
 import HeroSection from './hero/HeroSection';
 import HowItWorks from './how/HowItWorks';
 import MeetSection from './meet/MeetSection';
-import Features from './features/Features'
-import Review from './review/Review'
+import Features from './features/Features';
+import Review from './review/Review';
 import FaqSection from './faq/FaqSection';
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
       <HeroSection />
       <HowItWorks />
       <MeetSection />
-      <Features/>
+      <Features />
       <Review />
       <FaqSection />
       <section style={{ height: '100vh' }}></section>
