@@ -3,8 +3,7 @@ import ContentHeading from '../ContentHeading';
 import Decoration from '../Decoration';
 import Section from '../Section';
 import StepItem from './StepItem';
-import { useEffect, useRef, useState } from 'react';
-import { elementObserver } from '../helper';
+import { useEffect, useState } from 'react';
 import '../styles/how.css';
 
 const steps = [
@@ -35,18 +34,11 @@ const steps = [
 ];
 
 const HowItWorks = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionHow = useRef(null);
-
-  useEffect(() => {
-    elementObserver(setIsVisible, sectionHow, 0.2);
-  }, []);
-
   return (
-    <Section className="section-how" ref={sectionHow}>
+    <Section className="section-how">
       <Decoration src={'./images/how/top.png'} className={'decoration-top'} />
 
-      <div className={`content-wrapper ${isVisible ? 'slide-up' : ''}`}>
+      <div className={`content-wrapper`}>
         <Content>
           <ContentHeading
             title={'How It Works'}
@@ -56,25 +48,14 @@ const HowItWorks = () => {
       </div>
 
       <div className="steps-container">
-        {steps.map((step, index) => (
-          <div
-            key={index}
-            className={`step-wrapper ${
-              isVisible
-                ? index % 2 === 0
-                  ? 'slide-from-left'
-                  : 'slide-from-right'
-                : ''
-            }`}
-            style={{ transitionDelay: `${0.2 * (index + 1)}s` }}
-          >
-            <StepItem
-              number={step.number}
-              title={step.title}
-              description={step.description}
-              reverse={index % 2 !== 0}
-            />
-          </div>
+        {steps.map((step, i, steps) => (
+          <StepItem
+            key={i}
+            number={step.number}
+            title={step.title}
+            description={step.description}
+            reverse={i % 2 !== 0}
+          />
         ))}
       </div>
 
