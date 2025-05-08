@@ -3,16 +3,17 @@
 .section-review {
   padding-top: calc(10rem + 4.2rem);
 }
+
+.section-review .decoration-back {
+  top: 20%;
+  left: 0;
+}
+
 .section-review .content {
   width: 80%;
   margin: 0 auto;
   text-align: center;
   position: relative;
-}
-.section-review .subheading {
-  font-size: 1.7rem;
-  line-height: 1.6;
-  color: var(--txt);
 }
 
 .testimonials {

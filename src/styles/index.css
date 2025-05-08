@@ -58,7 +58,7 @@ img {
 }
 
 .heading-ternary {
-  font-size: 3.8rem;
+  font-size: 3.2rem;
 }
 
 .subheading {
@@ -82,6 +82,7 @@ img {
   font-size: 2rem;
   line-height: 1.6;
   color: var(--txt);
+  margin-bottom: 1.6rem;
 }
 
 .container {
