@@ -1,4 +1,4 @@
-export default function ContentHeading({ isHero, title, subheading }) {
+export default function ContentHeading({ isHero, title, subheading = false }) {
   return (
     <>
       {isHero ? (
@@ -6,7 +6,9 @@ export default function ContentHeading({ isHero, title, subheading }) {
       ) : (
         <h2 className="heading-secondary">{title}</h2>
       )}
-      <span className="subheading margin-bot-lrg">{subheading}</span>
+      {subheading && (
+        <span className="subheading margin-bot-lrg">{subheading}</span>
+      )}
     </>
   );
 }

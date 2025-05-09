@@ -1,0 +1,19 @@
+.section-download {
+  padding-top: 2rem;
+}
+
+.section-download .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.section-download .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-download .btn-download {
+  width: fit-content;
+  margin-top: 3rem;
+}

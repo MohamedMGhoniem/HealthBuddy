@@ -6,6 +6,7 @@ import Features from './features/Features';
 import Review from './review/Review';
 import FaqSection from './faq/FaqSection';
 import WhyMediBuddy from './why/WhyMediBuddy';
+import DownloadSection from './download/Download';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <WhyMediBuddy />
       <Review />
       <FaqSection />
+      <DownloadSection />
     </>
   );
 }

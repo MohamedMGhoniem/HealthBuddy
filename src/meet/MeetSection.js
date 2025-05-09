@@ -3,6 +3,7 @@ import Content from '../Content';
 import ContentHeading from '../ContentHeading';
 import Decoration from '../Decoration';
 import '../styles/meet.css';
+import SanjoMessage from './SanjoMessage';
 
 const messages = [
   'Craving something healthy and tasty? I got you!',
@@ -62,8 +63,4 @@ export default function HowItWorks() {
       <Decoration src={'./circles.png'} className={'decoration-bottom'} />
     </Section>
   );
-}
-
-function SanjoMessage({ message }) {
-  return <p className="message">{message}</p>;
 }
