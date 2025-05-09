@@ -55,7 +55,7 @@
 .faq-answer p {
   margin-top: 1rem;
   font-size: 1.7rem;
-  color: var(--txt);
+  color: var(--color-fourth);
   line-height: 1.5;
 }
 

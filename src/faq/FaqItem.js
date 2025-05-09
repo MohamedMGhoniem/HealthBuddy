@@ -5,8 +5,6 @@ export default function FaqItem({
   curQestion,
   isOpen,
 }) {
-  console.log(isOpen, curQestion);
-
   return (
     <li className="faq-item">
       <h3 className="heading-ternary">{question}</h3>

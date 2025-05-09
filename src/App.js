@@ -5,6 +5,7 @@ import MeetSection from './meet/MeetSection';
 import Features from './features/Features';
 import Review from './review/Review';
 import FaqSection from './faq/FaqSection';
+import WhyMediBuddy from './why/WhyMediBuddy';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <HowItWorks />
       <MeetSection />
       <Features />
+      <WhyMediBuddy />
       <Review />
       <FaqSection />
     </>
