@@ -1,0 +1,83 @@
+/*//////////////////////////////////////////*/
+.section-why {
+  padding: 10rem 0;
+}
+
+.section-why .content {
+  padding-left: 2rem;
+}
+
+.section-why .decoration-title {
+  width: 9rem;
+  height: auto;
+  top: 10rem;
+  left: 0;
+  transform: rotate(20deg) translateX(-50%);
+}
+
+.section-why .decoration-back {
+  top: 0;
+  left: 0;
+}
+
+.reasons {
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.reason {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2.4rem;
+  gap: 1.2rem;
+  height: 30rem;
+  transform: rotate(-9deg);
+  transition: transform 2s ease;
+}
+
+.reason.revealed {
+  transform: none;
+}
+
+.reason:nth-child(even) {
+  background-image: linear-gradient(
+    to right,
+    transparent 20%,
+    var(--color-secondary) 50%
+  );
+
+  & .paragraph {
+    color: var(--light-btn);
+  }
+}
+
+.reason:nth-child(odd) {
+  background-image: linear-gradient(
+    to right,
+    transparent 20%,
+    var(--color-fourth) 50%
+  );
+
+  & .heading-ternary {
+    color: var(--color-secondary);
+  }
+
+  & .paragraph {
+    color: #000;
+  }
+}
+
+.reason-image {
+  /* flex-basis: 40%; */
+  width: 40%;
+  height: 100%;
+}
+
+.reason-txt {
+  flex-basis: 60%;
+}
+
+.reason-image img {
+  object-fit: contain;
+}

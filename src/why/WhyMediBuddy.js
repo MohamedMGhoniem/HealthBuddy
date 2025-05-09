@@ -1,7 +1,9 @@
 import Content from '../Content';
 import ContentHeading from '../ContentHeading';
+import Decoration from '../Decoration';
 import Section from '../Section';
 import ResonItem from './ResonItem';
+import '../styles/why.css';
 
 const reasons = [
   {
@@ -28,12 +30,20 @@ const reasons = [
 export default function WhyMediBuddy() {
   return (
     <Section className={'section-why'}>
+      <Decoration
+        src={'./images/why/decoration-back.png'}
+        className={'decoration-back'}
+      />
       <Content>
         <ContentHeading
           title={'Why MediBuddy?'}
           subheading={
             'Your health isn’t one-size-fits-all — and neither are we.'
           }
+        />
+        <Decoration
+          src={'./images/why/sanjo-thinking.png'}
+          className={'decoration-title'}
         />
       </Content>
       <ul className="reasons list">
