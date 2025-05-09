@@ -2,7 +2,6 @@
 export function elementObserver(setter, ref, threshold) {
   const observer = new IntersectionObserver(
     ([entry]) => {
-      console.log(entry);
       if (entry.isIntersecting && entry.boundingClientRect.y > 0) {
         setter(true);
       }

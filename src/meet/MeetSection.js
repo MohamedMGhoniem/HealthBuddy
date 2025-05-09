@@ -4,6 +4,23 @@ import ContentHeading from '../ContentHeading';
 import Decoration from '../Decoration';
 import '../styles/meet.css';
 
+const messages = [
+  'Craving something healthy and tasty? I got you!',
+
+  'Tell me your goals, and I’ll cook up the perfect plan.',
+
+  'Allergic to nuts? No worries — I’ll keep ’em out of your meals.',
+
+  'Feeling low energy today? Let’s tweak your nutrition!',
+
+  'I learn what works for you — no one-size-fits-all plans here!',
+
+  'Need a cheat day? I won’t judge. I’ll just adjust!',
+
+  'Meal plans, snack ideas, hydration reminders… I do it all!',
+  'Your health journey, but smarter (and yummier).',
+];
+
 export default function HowItWorks() {
   return (
     <Section className={'section-meet'}>
@@ -19,37 +36,34 @@ export default function HowItWorks() {
       </Content>
       <div className="messages-container">
         <div className="sanjo-messages">
-          <p className="message">
-            Craving something healthy and tasty? I got you!
-          </p>
-          <p className="message">
-            Tell me your goals, and I’ll cook up the perfect plan.
-          </p>
-          <p className="message">
-            Allergic to nuts? No worries — I’ll keep 'em out of your meals.
-          </p>
-          <p className="message">
-            Feeling low energy today? Let’s tweak your nutrition!
-          </p>
-          <p className="message">
-            I learn what works for you — no one-size-fits-all plans here!
-          </p>
-          <p className="message">
-            Need a cheat day? I won’t judge. I’ll just adjust!
-          </p>
-          <p className="message">
-            Meal plans, snack ideas, hydration reminders… I do it all!
-          </p>
-          <p className="message">
-            Your health journey, but smarter (and yummier).
-          </p>
+          {messages.map((msg, i) => (
+            <SanjoMessage keys={i} message={msg} />
+          ))}
         </div>
+
+        <Decoration
+          src={'./images/meet/sanjo-back-stand-2.png'}
+          className={'decoration-sanjo-stand'}
+        />
+      </div>
+      <div className="meet-sanjo">
+        <p className="paragraph">
+          Hey there! I'm Sanjo — your smart health sidekick. I’m here to craft
+          meal plans, track your wellness, and keep you feeling your best. Think
+          of me as your AI nutritionist, fitness coach, and health cheerleader
+          all rolled into one!
+        </p>
+        <Decoration
+          src={'./images/meet/sanjo-waving.png'}
+          className={'decoration-sanjo-waving'}
+        />
       </div>
 
-      <figure className="sanjo-stand">
-        <img src="./images/meet/sanjo-back-stand-2.png" alt="sanjo standing" />
-      </figure>
       <Decoration src={'./circles.png'} className={'decoration-bottom'} />
     </Section>
   );
+}
+
+function SanjoMessage({ message }) {
+  return <p className="message">{message}</p>;
 }

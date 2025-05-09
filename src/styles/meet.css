@@ -33,15 +33,6 @@
   height: auto;
 }
 
-.sanjo-stand {
-  height: 30rem;
-  align-self: end;
-}
-
-.sanjo-stand img {
-  width: auto;
-}
-
 .messages-container {
   height: 75vh;
   -webkit-mask-image: linear-gradient(
@@ -59,6 +50,19 @@
     transparent 100%
   );
   overflow: hidden;
+  position: relative;
+}
+
+.messages-container .decoration-sanjo-stand {
+  height: 30rem;
+  width: auto;
+  bottom: 0;
+  right: 0;
+  z-index: 9;
+}
+
+.sanjo-stand img {
+  width: auto;
 }
 
 .sanjo-messages {
@@ -139,4 +143,32 @@
 }
 .message:nth-child(8) {
   animation-delay: calc(18s / 8 * (8 - 8) * -1);
+}
+
+.meet-sanjo .decoration-sanjo-waving {
+  right: 0;
+  top: 60%;
+  height: 30rem;
+  width: auto;
+  transform: rotate(-25deg) translateX(55%);
+  z-index: 9;
+}
+
+.meet-sanjo .paragraph {
+  background-color: var(--color-secondary);
+  padding: 2rem;
+  border-radius: 30px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    height: 9rem;
+    width: 5rem;
+    top: 100%;
+    right: 10%;
+    transform: rotate(140deg) translateY(30%);
+    clip-path: polygon(53% 0, 79% 37%, 82% 100%, 18% 100%, 19% 38%);
+  }
 }
