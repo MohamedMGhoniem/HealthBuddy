@@ -15,10 +15,10 @@ export default function ResonItem({ src, title, content }) {
       <figure className="reason-image">
         <img src={src} alt="reason related illustration"></img>
       </figure>
-      <p className="reason-txt">
+      <figcaption className="reason-txt">
         <h3 className="heading-ternary">{title}</h3>
         <p className="paragraph">{content}</p>
-      </p>
+      </figcaption>
     </li>
   );
 }
