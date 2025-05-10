@@ -6,7 +6,7 @@ import '../styles/header.css';
 
 export default function Header() {
   return (
-    <header className="header margin-bot-lrg">
+    <header className={'header margin-bot-lrg'}>
       <Logo />
       <Nav>
         <NavList />

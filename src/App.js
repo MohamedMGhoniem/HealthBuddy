@@ -9,8 +9,28 @@ import WhyMediBuddy from './why/WhyMediBuddy';
 import DownloadSection from './download/Download';
 import Newsletter from './newsletter/Newsletter';
 import Footer from './footer/Footer';
+import { useEffect, useRef, useState } from 'react';
 
 export default function App() {
+  useEffect(function () {
+    const hero = document.querySelector('.section-hero');
+    const header = document.querySelector('.header');
+
+    const heroObs = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) header.classList.add('sticky');
+        if (entry.isIntersecting) header.classList.remove('sticky');
+      },
+      { root: null, threshold: 0.2 }
+    );
+
+    heroObs.observe(hero);
+
+    return () => {
+      heroObs.unobserve(hero);
+    };
+  }, []);
+
   return (
     <>
       <Header />

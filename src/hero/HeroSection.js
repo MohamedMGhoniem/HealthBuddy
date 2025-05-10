@@ -8,7 +8,7 @@ import Content from '../Content';
 import Decoration from '../Decoration';
 import '../styles/hero.css';
 
-export default function MeetSection() {
+export default function HeroSection() {
   return (
     <Section className="section-hero">
       <Decoration

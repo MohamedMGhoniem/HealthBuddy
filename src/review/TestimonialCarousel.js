@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import Testimonial from './Testimonial';
 
 //I remember that🤺
-const testimonials = [
+const testimonialsArr = [
   {
     quote:
       'I love the AI mascot so much. A little health coach, my wellness companion. Cheering me on and keeping me strong 24/7!',
@@ -28,13 +29,37 @@ const testimonials = [
   },
 ];
 export default function TestimonialCarousel() {
+  const [openForm, setOpenForm] = useState(false);
+  const [comment, setComment] = useState('');
+  const [testimonials, setTestimonials] = useState(testimonialsArr);
+
+  function hadnleAddComment() {
+    setOpenForm(true);
+  }
+
+  function handleComment(e) {
+    setComment(e.target.value);
+  }
+
+  function handleSubmitComment(e) {
+    e.preventDefault();
+    console.log('submited');
+    setOpenForm(false);
+    setTestimonials([
+      ...testimonials,
+      { quote: comment, name: 'mo', stars: 4 },
+    ]);
+    setComment('');
+  }
+  console.log(testimonials);
+
   return (
     <div
       className="carousel-container"
       style={{ '--num-items': testimonials.length }}
     >
       <div className="testimonials">
-        {[...testimonials].map((testimonial, index) => (
+        {testimonials.slice(-4).map((testimonial, index) => (
           <Testimonial
             key={index}
             quote={testimonial.quote}
@@ -43,9 +68,23 @@ export default function TestimonialCarousel() {
           />
         ))}
       </div>
-      <button className="btn-add-comment">
+      <button className="btn-add-comment" onClick={hadnleAddComment}>
         + <span className="txt">add new comment</span>
       </button>
+      {openForm && (
+        <form className="form-comment" onSubmit={handleSubmitComment}>
+          <textarea
+            value={comment}
+            placeholder="add new comment"
+            onChange={handleComment}
+          >
+            {comment}
+          </textarea>
+          <button className="btn-submit-comment" type="submit">
+            Add
+          </button>
+        </form>
+      )}
     </div>
   );
 }

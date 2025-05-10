@@ -98,6 +98,18 @@ img {
   color: #fff;
 }
 
+.link:link,
+.link:visited {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.7s ease;
+}
+
+.link:hover,
+.link:active {
+  color: #888;
+}
+
 [class^='decoration-'] {
   position: absolute;
   z-index: -1;
