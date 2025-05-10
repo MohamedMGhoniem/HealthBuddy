@@ -8,6 +8,7 @@ import FaqSection from './faq/FaqSection';
 import WhyMediBuddy from './why/WhyMediBuddy';
 import DownloadSection from './download/Download';
 import Newsletter from './newsletter/Newsletter';
+import Footer from './footer/Footer';
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
       <FaqSection />
       <DownloadSection />
       <Newsletter />
+      <Footer />
     </>
   );
 }

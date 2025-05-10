@@ -1,4 +1,4 @@
-import Logo from './Logo';
+import Logo from '../Logo';
 import Nav from './Nav';
 import NavList from './NavList';
 import UserControls from './UserControls';
