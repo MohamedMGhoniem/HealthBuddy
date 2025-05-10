@@ -1,0 +1,27 @@
+.footer {
+  padding: 4rem 0;
+}
+
+.footer .container {
+  width: 100%;
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid var(--txt);
+}
+
+.footer .logo {
+  width: 30rem;
+  height: auto;
+}
+
+.footer .image {
+  height: 30rem;
+}
+
+.copywrite {
+  padding-left: 2rem;
+  color: #ddd;
+}
