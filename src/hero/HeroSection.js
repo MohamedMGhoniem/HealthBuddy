@@ -8,11 +8,11 @@ import Content from '../Content';
 import Decoration from '../Decoration';
 import '../styles/hero.css';
 
-export default function HeroSection() {
+export default function HeroSection({ theme }) {
   return (
     <Section className="section-hero">
       <Decoration
-        src={'./images/hero/hero-top.png'}
+        src={`./images/hero/hero-top${theme === 'light' ? '-l' : ''}.png`}
         className={'decoration-top'}
       />
       <Content>
@@ -36,7 +36,7 @@ export default function HeroSection() {
       <button className="btn-download">Download Now!</button>
       <Pulse />
       <Decoration
-        src={'./images/hero/hero-bottom.png'}
+        src={`./images/hero/hero-bottom${theme === 'light' ? '-l' : ''}.png`}
         className={'decoration-bottom'}
       />
     </Section>

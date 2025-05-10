@@ -16,7 +16,7 @@
 .header.sticky {
   position: fixed;
   top: 0;
-  background-color: var(--color-secondary);
+  background-color: var(--color-ternary);
 }
 
 .logo {

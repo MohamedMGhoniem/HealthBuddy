@@ -22,11 +22,11 @@ const messages = [
   'Your health journey, but smarter (and yummier).',
 ];
 
-export default function HowItWorks() {
+export default function HowItWorks({ theme }) {
   return (
     <Section className={'section-meet'}>
       <Decoration
-        src={'./images/meet/back.png'}
+        src={`./images/meet/back${theme === 'light' ? '-l' : ''}.png`}
         className={'decoration-back'}
       />
       <Content>

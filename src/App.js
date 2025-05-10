@@ -12,6 +12,17 @@ import Footer from './footer/Footer';
 import { useEffect, useRef, useState } from 'react';
 
 export default function App() {
+  const [theme, setTheme] = useState('dark');
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+  };
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.classList.toggle('light');
+  }, [theme]);
+
   useEffect(function () {
     const hero = document.querySelector('.section-hero');
     const header = document.querySelector('.header');
@@ -33,17 +44,17 @@ export default function App() {
 
   return (
     <>
-      <Header />
-      <HeroSection />
-      <HowItWorks />
-      <MeetSection />
-      <Features />
-      <WhyMediBuddy />
-      <Review />
-      <FaqSection />
-      <DownloadSection />
-      <Newsletter />
-      <Footer />
+      <Header toggleTheme={toggleTheme} theme={theme} />
+      <HeroSection theme={theme} />
+      <HowItWorks theme={theme} />
+      <MeetSection theme={theme} />
+      <Features theme={theme} />
+      <WhyMediBuddy theme={theme} />
+      <Review theme={theme} />
+      <FaqSection theme={theme} />
+      <DownloadSection theme={theme} />
+      <Newsletter theme={theme} />
+      <Footer theme={theme} />
     </>
   );
 }

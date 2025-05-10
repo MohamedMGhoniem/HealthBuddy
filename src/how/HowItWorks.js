@@ -33,10 +33,13 @@ const steps = [
   },
 ];
 
-const HowItWorks = () => {
+const HowItWorks = ({ theme }) => {
   return (
     <Section className="section-how">
-      <Decoration src={'./images/how/top.png'} className={'decoration-top'} />
+      <Decoration
+        src={`./images/how/top${theme === 'light' ? '-l' : ''}.png`}
+        className={'decoration-top'}
+      />
 
       <div className={`content-wrapper`}>
         <Content>
@@ -60,7 +63,7 @@ const HowItWorks = () => {
       </div>
 
       <Decoration
-        src={'./images/how/bottom.png'}
+        src={`./images/how/bottom${theme === 'light' ? '-l' : ''}.png`}
         className={'decoration-bottom'}
       />
     </Section>

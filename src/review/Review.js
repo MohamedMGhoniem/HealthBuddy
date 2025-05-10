@@ -6,11 +6,13 @@ import '../styles/review.css';
 import ContentParagraph from '../ContentParagraph';
 import Decoration from '../Decoration';
 
-export default function Review() {
+export default function Review({ theme }) {
   return (
     <Section className={'section-review'}>
       <Decoration
-        src={'./images/review/decoration-back.png'}
+        src={`./images/review/decoration-back${
+          theme === 'light' ? '-l' : ''
+        }.png`}
         className={'decoration-back'}
       />
       <Content>

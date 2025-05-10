@@ -13,13 +13,27 @@ FONT SIZE SYSTEM (px)
 
 :root {
   /*Dark Mode (default)*/
+  --color-bg: #001e45;
   --color-primary: #001e45;
   --color-secondary: #004aad;
   --color-ternary: #4d80c6;
   --color-fourth: #80a5d6;
   --txt: #e4efff;
+  --txt-heading: #e4efff;
   --heading-txtshadow: #1a5cb5;
   --light-btn: #c3dcff;
+}
+
+.light {
+  --color-bg: #eff4fa;
+  --color-primary: #004aad;
+  --color-secondary: #b3c9e6;
+  --color-ternary: #8fbfff;
+  --color-fourth: #004aad;
+  --txt-heading: #004aad;
+  --txt: #001e45;
+  --heading-txtshadow: transparent;
+  --light-btn: #004aad;
 }
 
 html {
@@ -28,7 +42,7 @@ html {
 
 body {
   font-family: sans-serif;
-  background-color: var(--color-primary);
+  background-color: var(--color-bg);
   overflow-x: hidden;
   position: relative;
 }
@@ -44,7 +58,7 @@ img {
 .heading-ternary {
   font-weight: 600;
   text-transform: capitalize;
-  color: var(--txt);
+  color: var(--txt-heading);
   margin-bottom: 1.8rem;
 }
 
@@ -95,12 +109,12 @@ img {
 .icon {
   width: 3.2rem;
   height: 3.2rem;
-  color: #fff;
+  color: var(--txt);
 }
 
 .link:link,
 .link:visited {
-  color: #fff;
+  color: var(--txt);
   text-decoration: none;
   transition: color 0.7s ease;
 }

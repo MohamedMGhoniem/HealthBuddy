@@ -27,11 +27,11 @@ const reasons = [
     text: 'Everything you need, always on hand. Plans, reminders, support — all in one beautifully simple app.',
   },
 ];
-export default function WhyMediBuddy() {
+export default function WhyMediBuddy({ theme }) {
   return (
     <Section className={'section-why'}>
       <Decoration
-        src={'./images/why/decoration-back.png'}
+        src={`./images/why/decoration-back${theme === 'light' ? '-l' : ''}.png`}
         className={'decoration-back'}
       />
       <Content>

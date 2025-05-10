@@ -3,8 +3,7 @@ import Section from '../Section';
 import Content from '../Content';
 import Decoration from '../Decoration';
 import ContentHeading from '../ContentHeading.js';
-import '../styles/features.css'
-
+import '../styles/features.css';
 
 const features = [
   { icon: 'user', text: 'Personalized Meal Plans', lineLength: 'medium' },
@@ -15,11 +14,13 @@ const features = [
   { icon: 'bell', text: 'Daily Health Reminders', lineLength: 'long' },
 ];
 
-export default function Features() {
+export default function Features({ theme }) {
   return (
     <Section className={'section-features'}>
       <Decoration
-        src={'./images/feature/decoration-back.png'}
+        src={`./images/feature/decoration-back${
+          theme === 'light' ? '-l' : ''
+        }.png`}
         className={'decoration-back'}
       />
       <Content className={'features-content'}>

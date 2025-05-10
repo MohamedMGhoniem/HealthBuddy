@@ -45,10 +45,11 @@ export default function TestimonialCarousel() {
     e.preventDefault();
     console.log('submited');
     setOpenForm(false);
-    setTestimonials([
-      ...testimonials,
-      { quote: comment, name: 'mo', stars: 4 },
-    ]);
+    if (comment !== '' && comment.length > 3)
+      setTestimonials([
+        ...testimonials,
+        { quote: comment, name: 'mo', stars: 4 },
+      ]);
     setComment('');
   }
   console.log(testimonials);

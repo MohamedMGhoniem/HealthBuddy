@@ -82,7 +82,7 @@
   animation: 30s forwards infinite scrollDownScreens;
 }
 
-#sanjo-arm {
+#sanjo-hand {
   animation: 1.4s alternate infinite wave;
   transform-origin: left;
   transform-box: fill-box;
@@ -97,94 +97,7 @@
 
 @keyframes scrollDownScreens {
   to {
-    transform: translate3d(0, -660%, 0);
-  }
-}
-
-@keyframes goside {
-  0% {
-    opacity: 1;
-    transform: translate3d(0%, 0, 0);
-  }
-
-  5% {
-    transform: translate3d(0%, 0, 0);
-    opacity: 1;
-  }
-  15% {
-    transform: translate3d(0%, -90%, 0);
-    opacity: 1;
-  }
-  20% {
-    transform: translate3d(0%, -90%, 0);
-    opacity: 1;
-  }
-
-  25% {
-    transform: translate3d(0%, -170%, 0);
-    opacity: 1;
-  }
-  30% {
-    transform: translate3d(0%, 170%, 0);
-    opacity: 1;
-  }
-
-  35% {
-    transform: translate3d(0%, -260%, 0);
-    opacity: 1;
-  }
-  40% {
-    transform: translate3d(0%, 260%, 0);
-    opacity: 1;
-  }
-
-  45% {
-    transform: translate3d(0%, -360%, 0);
-    opacity: 1;
-  }
-  50% {
-    transform: translate3d(0%, -360%, 0);
-    opacity: 1;
-  }
-
-  55% {
-    transform: translate3d(0%, -460%, 0);
-    opacity: 1;
-  }
-  60% {
-    transform: translate3d(0%, -460%, 0);
-    opacity: 1;
-  }
-
-  65% {
-    transform: translate3d(0%, -570%, 0);
-    opacity: 1;
-  }
-  70% {
-    transform: translate3d(0%, -570%, 0);
-    opacity: 1;
-  }
-
-  75% {
-    transform: translate3d(0%, -660%, 0);
-    opacity: 1;
-  }
-  80% {
-    transform: translate3d(0%, -660%, 0);
-    opacity: 1;
-  }
-
-  85% {
-    transform: translate3d(0%, -7300%, 0);
-    opacity: 1;
-  }
-  90% {
-    transform: translate3d(0%, -730%, 0);
-    opacity: 1;
-  }
-  100% {
-    transform: translate3d(0%, -730%, 0);
-    opacity: 0;
+    transform: translate3d(0, -610%, 0);
   }
 }
 
