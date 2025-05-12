@@ -31,9 +31,18 @@ export default function WhyMediBuddy({ theme }) {
   return (
     <Section className={'section-why'}>
       <Decoration
-        src={`./images/why/decoration-back${theme === 'light' ? '-l' : ''}.png`}
-        className={'decoration-back'}
+        src={`./images/why/decoration-back-l.png`}
+        className={`decoration-back ${
+          theme === 'light' && 'decoration-selected'
+        }`}
       />
+      <Decoration
+        src={`./images/why/decoration-back.png`}
+        className={`decoration-back ${
+          theme === 'dark' && 'decoration-selected'
+        }`}
+      />
+
       <Content>
         <ContentHeading
           title={'Why MediBuddy?'}

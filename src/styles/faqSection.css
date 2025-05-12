@@ -3,7 +3,6 @@
 .section-faq {
   padding-top: calc(10rem + 4.2rem);
   display: flex;
-  height: 100vh;
 }
 
 .section-faq .container {

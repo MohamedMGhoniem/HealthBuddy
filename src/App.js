@@ -10,6 +10,7 @@ import DownloadSection from './download/Download';
 import Newsletter from './newsletter/Newsletter';
 import Footer from './footer/Footer';
 import { useEffect, useRef, useState } from 'react';
+import Spinner from './Spinner';
 
 export default function App() {
   const [theme, setTheme] = useState('dark');

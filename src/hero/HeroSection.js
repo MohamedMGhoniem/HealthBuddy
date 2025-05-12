@@ -12,8 +12,16 @@ export default function HeroSection({ theme }) {
   return (
     <Section className="section-hero">
       <Decoration
-        src={`./images/hero/hero-top${theme === 'light' ? '-l' : ''}.png`}
-        className={'decoration-top'}
+        src={`./images/hero/hero-top-l.png`}
+        className={`decoration-top ${
+          theme === 'light' && 'decoration-selected'
+        }`}
+      />
+      <Decoration
+        src={`./images/hero/hero-top.png`}
+        className={`decoration-top ${
+          theme === 'dark' && 'decoration-selected'
+        }`}
       />
       <Content>
         <ContentHeading
@@ -35,9 +43,18 @@ export default function HeroSection({ theme }) {
       </Content>
       <button className="btn-download">Download Now!</button>
       <Pulse />
+
       <Decoration
-        src={`./images/hero/hero-bottom${theme === 'light' ? '-l' : ''}.png`}
-        className={'decoration-bottom'}
+        src={`./images/hero/hero-bottom-l.png`}
+        className={`decoration-bottom ${
+          theme === 'light' && 'decoration-selected'
+        }`}
+      />
+      <Decoration
+        src={`./images/hero/hero-bottom.png`}
+        className={`decoration-bottom ${
+          theme === 'dark' && 'decoration-selected'
+        }`}
       />
     </Section>
   );

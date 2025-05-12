@@ -10,11 +10,18 @@ export default function Review({ theme }) {
   return (
     <Section className={'section-review'}>
       <Decoration
-        src={`./images/review/decoration-back${
-          theme === 'light' ? '-l' : ''
-        }.png`}
-        className={'decoration-back'}
+        src={`./images/review/decoration-back-l.png`}
+        className={`decoration-back ${
+          theme === 'light' && 'decoration-selected'
+        }`}
       />
+      <Decoration
+        src={`./images/review/decoration-back.png`}
+        className={`decoration-back ${
+          theme === 'dark' && 'decoration-selected'
+        }`}
+      />
+
       <Content>
         <ContentHeading title={'Healthy stories worth sharing'} />
         <ContentParagraph>

@@ -37,8 +37,16 @@ const HowItWorks = ({ theme }) => {
   return (
     <Section className="section-how">
       <Decoration
-        src={`./images/how/top${theme === 'light' ? '-l' : ''}.png`}
-        className={'decoration-top'}
+        src={`./images/how/top-l.png`}
+        className={`decoration-top ${
+          theme === 'light' && 'decoration-selected'
+        }`}
+      />
+      <Decoration
+        src={`./images/how/top.png`}
+        className={`decoration-top ${
+          theme === 'dark' && 'decoration-selected'
+        }`}
       />
 
       <div className={`content-wrapper`}>
@@ -63,8 +71,16 @@ const HowItWorks = ({ theme }) => {
       </div>
 
       <Decoration
-        src={`./images/how/bottom${theme === 'light' ? '-l' : ''}.png`}
-        className={'decoration-bottom'}
+        src={`./images/how/bottom-l.png`}
+        className={`decoration-bottom ${
+          theme === 'light' && 'decoration-selected'
+        }`}
+      />
+      <Decoration
+        src={`./images/how/bottom.png`}
+        className={`decoration-bottom ${
+          theme === 'dark' && 'decoration-selected'
+        }`}
       />
     </Section>
   );

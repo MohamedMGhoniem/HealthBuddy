@@ -26,9 +26,18 @@ export default function HowItWorks({ theme }) {
   return (
     <Section className={'section-meet'}>
       <Decoration
-        src={`./images/meet/back${theme === 'light' ? '-l' : ''}.png`}
-        className={'decoration-back'}
+        src={`./images/meet/back-l.png`}
+        className={`decoration-back ${
+          theme === 'light' && 'decoration-selected'
+        }`}
       />
+      <Decoration
+        src={`./images/meet/back.png`}
+        className={`decoration-back ${
+          theme === 'dark' && 'decoration-selected'
+        }`}
+      />
+
       <Content>
         <ContentHeading
           title={'Meet Your Buddy'}

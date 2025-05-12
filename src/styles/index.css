@@ -130,6 +130,11 @@ img {
 [class^='decoration-'] {
   position: absolute;
   z-index: -999;
+  display: none;
+}
+
+[class^='decoration-'].decoration-selected {
+  display: block;
 }
 
 [class^='section-'] {

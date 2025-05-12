@@ -18,9 +18,18 @@ export default function Features({ theme }) {
   return (
     <Section className={'section-features'}>
       <Decoration
-        src={`./images/feature/back${theme === 'light' ? '-l' : ''}.png`}
-        className={'decoration-back'}
+        src={`./images/feature/back-l.png`}
+        className={`decoration-back ${
+          theme === 'light' && 'decoration-selected'
+        }`}
       />
+      <Decoration
+        src={`./images/feature/back.png`}
+        className={`decoration-back ${
+          theme === 'dark' && 'decoration-selected'
+        }`}
+      />
+
       <Content className={'features-content'}>
         <Decoration
           src={'./images/feature/white-circle.png'}
