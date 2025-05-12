@@ -5,6 +5,9 @@ export function elementObserver(setter, ref, threshold) {
       if (entry.isIntersecting && entry.boundingClientRect.y > 0) {
         setter(true);
       }
+      if (entry.isIntersecting && entry.boundingClientRect.y < 0) {
+        setter(true);
+      }
       if (!entry.isIntersecting && entry.boundingClientRect.y > 0) {
         setter(false);
       }
