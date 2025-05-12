@@ -3,7 +3,6 @@
 .header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1.2rem 2.4rem;
   height: 8rem;
@@ -29,6 +28,7 @@
   align-items: center;
   justify-content: space-between;
   width: 40%;
+  margin-left: auto;
 }
 
 .nav-list {

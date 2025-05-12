@@ -29,6 +29,11 @@ export default function NavList() {
           why
         </a>
       </li>
+      <li>
+        <a className="link" href="#newsletter">
+          newsletter
+        </a>
+      </li>
     </ul>
   );
 }
