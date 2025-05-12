@@ -11,13 +11,14 @@ FONT SIZE SYSTEM (px)
   box-sizing: border-box;
 }
 
-:root {
+.dark {
   /*Dark Mode (default)*/
   --color-bg: #001e45;
   --color-primary: #001e45;
   --color-secondary: #004aad;
   --color-ternary: #4d80c6;
   --color-fourth: #80a5d6;
+  --color-fifth: #e4efff;
   --txt: #e4efff;
   --txt-heading: #e4efff;
   --heading-txtshadow: #1a5cb5;
@@ -25,11 +26,12 @@ FONT SIZE SYSTEM (px)
 }
 
 .light {
-  --color-bg: #eff4fa;
+  --color-bg: #ccdbef;
   --color-primary: #004aad;
   --color-secondary: #b3c9e6;
   --color-ternary: #8fbfff;
   --color-fourth: #004aad;
+  --color-fifth: #4d80c6;
   --txt-heading: #004aad;
   --txt: #001e45;
   --heading-txtshadow: transparent;
@@ -117,6 +119,7 @@ img {
   color: var(--txt);
   text-decoration: none;
   transition: color 0.7s ease;
+  font-size: 1.8rem;
 }
 
 .link:hover,
@@ -126,12 +129,13 @@ img {
 
 [class^='decoration-'] {
   position: absolute;
-  z-index: -1;
+  z-index: -99;
 }
 
 [class^='section-'] {
   position: relative;
-  min-height: fit-content;
+  min-height: 70vh;
+  max-height: fit-content;
 }
 
 [class^='btn-'] {

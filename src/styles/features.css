@@ -116,7 +116,7 @@
 }
 
 .feature-item {
-  background-color: var(--txt);
+  background-color: var(--color-fifth);
   color: var(--color-secondary);
   border-radius: 2rem;
   display: flex;
@@ -126,7 +126,6 @@
   font-weight: 600;
   font-size: 2.5rem;
   transition: transform 0.3s ease;
-  /* width: fit-content; */
 }
 
 .feature-item .icon {

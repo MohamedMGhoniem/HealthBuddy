@@ -14,14 +14,18 @@ import { useEffect, useRef, useState } from 'react';
 export default function App() {
   const [theme, setTheme] = useState('dark');
 
+  const prevTheme = useRef(theme);
+
   const toggleTheme = () => {
     setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
   };
 
   useEffect(() => {
     const root = document.documentElement;
-    root.classList.toggle('light');
-  }, [theme]);
+    root.classList.remove(prevTheme.current);
+    root.classList.add(theme);
+    prevTheme.current = theme;
+  }, [theme, prevTheme]);
 
   useEffect(function () {
     const hero = document.querySelector('.section-hero');

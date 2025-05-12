@@ -4,6 +4,12 @@
   padding-top: calc(10rem + 4.2rem);
 }
 
+.section-review .container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
 .section-review .decoration-back {
   top: 20%;
   left: 0;
@@ -26,7 +32,7 @@
 }
 
 .testimonial {
-  background: var(--txt);
+  background: var(--color-fifth);
   border-radius: 1rem;
   padding: 5rem;
   width: 33.33%;
