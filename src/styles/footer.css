@@ -23,5 +23,11 @@
 
 .copywrite {
   padding-left: 2rem;
-  color: #ddd;
+  font-size: 1.2rem;
+  color: var(--txt);
+}
+
+.copywrite .link {
+  font-size: inherit;
+  border-bottom: 1px solid var(--txt);
 }

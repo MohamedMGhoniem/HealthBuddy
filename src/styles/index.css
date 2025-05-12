@@ -129,7 +129,7 @@ img {
 
 [class^='decoration-'] {
   position: absolute;
-  z-index: -99;
+  z-index: -999;
 }
 
 [class^='section-'] {

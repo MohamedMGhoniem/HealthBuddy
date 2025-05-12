@@ -14,8 +14,18 @@ export default function Footer() {
         </figure>
       </div>
       <p className="copywrite">
-        © 2025 Medibuddy. Crafted with care and a lot of coffee by Mohamed
-        Ghoniem & Aya Elagamy. All rights reserved.
+        © 2025 Medibuddy. Crafted with care and a lot of coffee by{' '}
+        <a
+          className="link"
+          href="https://www.linkedin.com/in/mohamed-ghoniem-96b307285/"
+        >
+          Mohamed Ghoniem
+        </a>{' '}
+        &{' '}
+        <a className="link" href="https://www.linkedin.com/in/aya-elagamy/">
+          Aya Elagamy
+        </a>
+        . All rights reserved.
       </p>
     </footer>
   );
