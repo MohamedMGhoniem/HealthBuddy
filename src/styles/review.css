@@ -136,21 +136,70 @@
   }
 }
 
+.form-container {
+  width: 40%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.form-container.shown {
+  transform: none;
+  opacity: 1;
+}
+
+.form-container .btn-close {
+  width: 2rem;
+  margin-left: auto;
+}
+
 .form-comment {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: flex-end;
-  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 11px;
 }
 
 .form-comment textarea {
   font-size: 1.8rem;
-  min-height: 10rem;
-  max-height: 30rem;
-  width: 80rem;
+  min-height: 20rem;
+  max-height: 20rem;
+  min-width: 100%;
+  max-width: 100%;
+  outline: none;
+  border: none;
+  margin-bottom: 0.8rem;
+
+  &:active,
+  &:focus {
+    border: 3px solid var(--color-secondary);
+  }
+}
+
+.form-comment textarea::placeholder {
+  color: #ccc;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.form-comment textarea:not(:placeholder-shown):not(:focus) {
+  border: 2px solid var(--color-secondary);
 }
 
 .form-comment button {
   background-color: var(--color-secondary);
   color: var(--txt);
+  transition: box-shadow 0.5s ease;
+
+  &:hover {
+    box-shadow: 2px 2px #999;
+  }
 }

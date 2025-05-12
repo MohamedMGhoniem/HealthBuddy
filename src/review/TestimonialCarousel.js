@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Testimonial from './Testimonial';
+import CommentsForm from './CommentsForm';
 
 //I remember that🤺
 const testimonialsArr = [
@@ -33,7 +34,7 @@ export default function TestimonialCarousel() {
   const [comment, setComment] = useState('');
   const [testimonials, setTestimonials] = useState(testimonialsArr);
 
-  function hadnleAddComment() {
+  function handleAddComment() {
     setOpenForm(true);
   }
 
@@ -52,7 +53,10 @@ export default function TestimonialCarousel() {
       ]);
     setComment('');
   }
-  console.log(testimonials);
+
+  function handleCloseForm() {
+    setOpenForm(false);
+  }
 
   return (
     <div
@@ -69,22 +73,17 @@ export default function TestimonialCarousel() {
           />
         ))}
       </div>
-      <button className="btn-add-comment" onClick={hadnleAddComment}>
-        + <span className="txt">add new comment</span>
-      </button>
-      {openForm && (
-        <form className="form-comment" onSubmit={handleSubmitComment}>
-          <textarea
-            value={comment}
-            placeholder="add new comment"
-            onChange={handleComment}
-          >
-            {comment}
-          </textarea>
-          <button className="btn-submit-comment" type="submit">
-            Add
-          </button>
-        </form>
+      {openForm ? (
+        <CommentsForm
+          onAddComment={handleComment}
+          comment={comment}
+          onSubmitComment={handleSubmitComment}
+          onCloseForm={handleCloseForm}
+        />
+      ) : (
+        <button className="btn-add-comment" onClick={handleAddComment}>
+          + <span className="txt">add new comment</span>
+        </button>
       )}
     </div>
   );

@@ -22,9 +22,7 @@ export default function Review({ theme }) {
           feel better, eat smarter, and take charge of their health every day.
         </ContentParagraph>
       </Content>
-      <div className="container">
-        <TestimonialCarousel />
-      </div>
+      <TestimonialCarousel />
     </Section>
   );
 }
