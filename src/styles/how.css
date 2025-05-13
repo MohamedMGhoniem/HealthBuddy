@@ -104,6 +104,7 @@
   margin: 0 auto;
   transform: scale(0.5);
   transition: transform 0.8s ease;
+  overflow: hidden;
 }
 
 .reveal-parts .phone {

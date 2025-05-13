@@ -2,7 +2,7 @@ import PhoneGraphic from './PhoneGraphic';
 import { elementObserver } from '../helper';
 import { useEffect, useRef, useState } from 'react';
 
-const StepItem = function ({ number, title, description, reverse }) {
+const StepItem = function ({ number, title, description, reverse, src }) {
   const [isVisible, setIsVisible] = useState(false);
   const observedEl = useRef(null);
 
@@ -22,7 +22,7 @@ const StepItem = function ({ number, title, description, reverse }) {
         <h3 className="heading-ternary">{title}</h3>
         <p className="paragraph">{description}</p>
       </div>
-      <PhoneGraphic />
+      <PhoneGraphic src={src} />
     </div>
   );
 };

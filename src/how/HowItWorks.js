@@ -12,24 +12,28 @@ const steps = [
     title: 'Tell Us About You',
     description:
       'Start by sharing a little about yourself — your goals, dietary preferences, allergies, and lifestyle. The more we know, the better we can help!',
+    src:"./images/how/img1.jpg"
   },
   {
     number: '02',
     title: 'Let the AI Do Its Thing',
     description:
       'Our smart buddy (yes, that lovable mascot!) crunches the numbers, learns your needs, and builds a plan that fits you — not some generic diet.',
+    src:"./images/how/2.jpg"
   },
   {
     number: '03',
     title: 'Get Your Daily Plan',
     description:
       'Receive daily personalized meal plans with full nutrition breakdowns, snack ideas, hydration reminders, and more — all tailored to your vibe.',
+    src:"./images/how/3.jpg"
   },
   {
     number: '04',
     title: 'Track, Adjust & Thrive',
     description:
       'Life changes, and so can your plan! Log your meals, share your progress, and let MedBuddy evolve with you every step of the way.',
+    src:"./images/how/4.jpg"
   },
 ];
 
@@ -65,6 +69,7 @@ const HowItWorks = ({ theme }) => {
             number={step.number}
             title={step.title}
             description={step.description}
+            src={step.src}
             reverse={i % 2 !== 0}
           />
         ))}
