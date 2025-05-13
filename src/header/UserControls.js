@@ -1,4 +1,4 @@
-export default function UserControls({ toggleTheme, theme }) {
+export default function UserControls({ toggleTheme, theme, handleOpenForm }) {
   return (
     <div className="user-controls">
       <button className="btn-theme" onClick={toggleTheme}>
@@ -12,8 +12,10 @@ export default function UserControls({ toggleTheme, theme }) {
           </svg>
         )}
       </button>
-      <button className="btn-account">
-        <img src="./logo.png" alt="user profile"></img>
+      <button className="btn-account" onClick={handleOpenForm}>
+        <svg className="icon">
+          <use href="./svg.svg#icon-login"></use>
+        </svg>
       </button>
     </div>
   );

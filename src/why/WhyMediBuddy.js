@@ -52,7 +52,7 @@ export default function WhyMediBuddy({ theme }) {
         />
         <Decoration
           src={'./images/why/sanjo-thinking.png'}
-          className={'decoration-title'}
+          className={'decoration-title decoration-selected'}
         />
       </Content>
       <ul className="reasons list">

@@ -10,16 +10,25 @@ import DownloadSection from './download/Download';
 import Newsletter from './newsletter/Newsletter';
 import Footer from './footer/Footer';
 import { useEffect, useRef, useState } from 'react';
-import Spinner from './Spinner';
+import Login from './login/Login';
 
 export default function App() {
   const [theme, setTheme] = useState('dark');
+  const [openLoginForm, setOpenLoginForm] = useState(false);
 
   const prevTheme = useRef(theme);
 
   const toggleTheme = () => {
     setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
   };
+
+  function handleOpenForm() {
+    setOpenLoginForm(true);
+  }
+
+  function handleCloseForm() {
+    setOpenLoginForm(false);
+  }
 
   useEffect(() => {
     const root = document.documentElement;
@@ -49,7 +58,12 @@ export default function App() {
 
   return (
     <>
-      <Header toggleTheme={toggleTheme} theme={theme} />
+      <Header
+        toggleTheme={toggleTheme}
+        theme={theme}
+        handleOpenForm={handleOpenForm}
+      />
+      {openLoginForm && <Login onCloseForm={handleCloseForm} />}
       <HeroSection theme={theme} />
       <HowItWorks theme={theme} />
       <MeetSection theme={theme} />

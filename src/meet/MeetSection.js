@@ -53,7 +53,7 @@ export default function HowItWorks({ theme }) {
 
         <Decoration
           src={'./images/meet/sanjo-back-stand-2.png'}
-          className={'decoration-sanjo-stand'}
+          className={'decoration-sanjo-stand decoration-selected'}
         />
       </div>
       <div className="meet-sanjo">
@@ -65,11 +65,14 @@ export default function HowItWorks({ theme }) {
         </p>
         <Decoration
           src={'./images/meet/sanjo-waving.png'}
-          className={'decoration-sanjo-waving'}
+          className={'decoration-sanjo-waving decoration-selected'}
         />
       </div>
 
-      <Decoration src={'./circles.png'} className={'decoration-bottom'} />
+      <Decoration
+        src={'./circles.png'}
+        className={'decoration-bottom decoration-selected'}
+      />
     </Section>
   );
 }

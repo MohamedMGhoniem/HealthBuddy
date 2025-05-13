@@ -21,7 +21,10 @@ export default function Newsletter() {
       </div>
       <NewsletterForm />
 
-      <Decoration src={'./circles.png'} className={'decoration-bottom'} />
+      <Decoration
+        src={'./circles.png'}
+        className={'decoration-bottom decoration-selected'}
+      />
     </Section>
   );
 }

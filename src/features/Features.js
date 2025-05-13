@@ -33,12 +33,12 @@ export default function Features({ theme }) {
       <Content className={'features-content'}>
         <Decoration
           src={'./images/feature/white-circle.png'}
-          className={'circle_up'}
+          className={'circle_up decoration-selected'}
         />
         <ContentHeading title={'Key Features'} />
         <Decoration
           src={'./images/feature/white-circle.png'}
-          className={'circle_down'}
+          className={'circle_down decoration-selected'}
         />
       </Content>
 
@@ -52,7 +52,10 @@ export default function Features({ theme }) {
           </div>
         ))}
       </div>
-      <Decoration src={'./circles.png'} className={'decoration-bottom'} />
+      <Decoration
+        src={'./circles.png'}
+        className={'decoration-bottom decoration-selected'}
+      />
       {/*this img not match the design can you check it ? 
             and there is another img missed "ضبف الصور صح يا استااااذ"*/}
     </Section>

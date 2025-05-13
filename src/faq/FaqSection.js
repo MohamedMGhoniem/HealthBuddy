@@ -58,7 +58,10 @@ export default function FaqSection() {
           />
         ))}
       </ul>
-      <Decoration src={'./circles.png'} className={'decoration-bottom'} />
+      <Decoration
+        src={'./circles.png'}
+        className={'decoration-bottom decoration-selected'}
+      />
     </Section>
   );
 }

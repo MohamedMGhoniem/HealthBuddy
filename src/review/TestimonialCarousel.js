@@ -31,27 +31,10 @@ const testimonialsArr = [
 ];
 export default function TestimonialCarousel() {
   const [openForm, setOpenForm] = useState(false);
-  const [comment, setComment] = useState('');
   const [testimonials, setTestimonials] = useState(testimonialsArr);
 
   function handleAddComment() {
     setOpenForm(true);
-  }
-
-  function handleComment(e) {
-    setComment(e.target.value);
-  }
-
-  function handleSubmitComment(e) {
-    e.preventDefault();
-    console.log('submited');
-    setOpenForm(false);
-    if (comment !== '' && comment.length > 3)
-      setTestimonials([
-        ...testimonials,
-        { quote: comment, name: 'mo', stars: 4 },
-      ]);
-    setComment('');
   }
 
   function handleCloseForm() {
@@ -75,9 +58,8 @@ export default function TestimonialCarousel() {
       </div>
       {openForm ? (
         <CommentsForm
-          onAddComment={handleComment}
-          comment={comment}
-          onSubmitComment={handleSubmitComment}
+          comments={testimonials}
+          setComments={setTestimonials}
           onCloseForm={handleCloseForm}
         />
       ) : (

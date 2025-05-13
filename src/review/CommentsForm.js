@@ -1,16 +1,26 @@
 import { useEffect, useState } from 'react';
 
-export default function CommentsForm({
-  onAddComment,
-  comment,
-  onSubmitComment,
-  onCloseForm,
-}) {
+export default function CommentsForm({ comments, setComments, onCloseForm }) {
   const [mounted, setMounted] = useState(false);
+  const [commentTxt, setCommentTxt] = useState('');
+  const [rateNum, setRateNum] = useState(1);
+  const [userName, setUserName] = useState('');
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  function handleSubmitComment(e) {
+    e.preventDefault();
+    console.log('submited');
+    onCloseForm();
+    if (commentTxt !== '' && commentTxt.length > 3)
+      setComments([
+        ...comments,
+        { quote: commentTxt, name: userName, stars: Number(rateNum) },
+      ]);
+    setCommentTxt('');
+  }
 
   return (
     <div className={`form-container ${mounted ? 'shown' : ''}`}>
@@ -19,18 +29,35 @@ export default function CommentsForm({
           <use href="./svg.svg#icon-close"></use>
         </svg>
       </button>
-      <form className="form-comment" onSubmit={onSubmitComment}>
+      <form className="form-comment" onSubmit={handleSubmitComment}>
         <textarea
           required
-          value={comment}
+          value={commentTxt}
           placeholder="add new comment"
-          onChange={onAddComment}
+          onChange={e => setCommentTxt(e.target.value)}
         >
-          {comment}
+          {commentTxt}
         </textarea>
-        <button className="btn-submit-comment" type="submit">
-          Add
-        </button>
+        <div className="form-controls">
+          <input
+            type="text"
+            required
+            placeholder="Your Name"
+            value={userName}
+            onChange={e => setUserName(e.target.value)}
+          />
+          <input
+            type="number"
+            min={'1'}
+            max={'5'}
+            required
+            value={rateNum}
+            onChange={e => setRateNum(e.target.value)}
+          />
+          <button className="btn-submit-comment" type="submit">
+            Add
+          </button>
+        </div>
       </form>
     </div>
   );
