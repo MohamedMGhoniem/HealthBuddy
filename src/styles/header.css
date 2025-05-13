@@ -39,7 +39,8 @@
 
 .user-controls {
   display: flex;
-  gap: 2.4rem;
+  align-items: center;
+  gap: 2rem;
 }
 
 .btn-account {
